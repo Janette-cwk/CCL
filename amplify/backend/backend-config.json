@@ -1,0 +1,34 @@
+{
+	"api": {
+		"ccl": {
+			"service": "AppSync",
+			"providerPlugin": "awscloudformation",
+			"output": {
+				"authConfig": {
+					"additionalAuthenticationProviders": [],
+					"defaultAuthentication": {
+						"authenticationType": "API_KEY",
+						"apiKeyConfig": {
+							"description": "",
+							"apiKeyExpirationDays": "365"
+						}
+					}
+				}
+			}
+		}
+	},
+	"auth": {
+		"cclf4b7731e": {
+			"service": "Cognito",
+			"providerPlugin": "awscloudformation",
+			"dependsOn": [],
+			"customAuth": false
+		}
+	},
+	"storage": {
+		"cclimages": {
+			"service": "S3",
+			"providerPlugin": "awscloudformation"
+		}
+	}
+}

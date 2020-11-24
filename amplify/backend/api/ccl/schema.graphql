@@ -1,0 +1,76 @@
+enum Status {
+  DRAFT
+  PUBLISHED
+  RETIRED
+}
+ 
+type Course @model @versioned {
+  id: ID!
+  name: String
+  status: Status!
+  version: Int!
+  created_at: String
+  UserCourse: [UserCourse] @connection(name: "CourseInUserCourse")
+  sections: [Section!] @connection(name: "CourseSections")
+}
+ 
+type Section @model {
+  id: ID!
+  name: String
+  index: Int
+  course: Course @connection(name: "CourseSections")
+  pages: [Page!] @connection(name: "SectionPages")
+}
+ 
+type Content @model {
+  id: ID!
+  index: Int
+  page: Page! @connection(name: "PageContent")
+  content: String!
+  contentType: String
+}
+ 
+type Page @model {
+  id: ID!
+  name: String
+  index: Int
+  content: [Content] @connection(name: "PageContent")
+  section: Section @connection(name: "SectionPages")
+  template: String
+}
+ 
+type UserCourse @model {
+  user: User @connection(name: "UserInUserCourse")
+  course: Course @connection(name: "CourseInUserCourse")
+  progress: Float!
+  quiz_score: Int
+  certificate_status: Boolean!
+}
+ 
+type User @model {
+  id: ID!
+  first_name: String!
+  last_name: String!
+  UserCourse: [UserCourse] @connection(name: "UserInUserCourse")
+  UserProgram: [UserProgram] @connection(name: "UserInUserProgram")
+  certificates: [Certificate] @connection(name: "UserCertificates")
+}
+  
+type UserProgram @model {
+  user: User @connection(name: "UserInUserProgram")
+  program: Program @connection(name: "ProgramInUserProgram")
+  begin_date: AWSDate!
+  completion_date: AWSDate
+}
+ 
+type Program @model {
+  id: ID!
+  creation_date: AWSDate!
+  name: String!
+  UserProgram: [UserProgram] @connection(name: "ProgramInUserProgram")
+}
+
+type Certificate @model {
+  cert_code: String!
+  user: User @connection(name: "UserCertificates")
+}

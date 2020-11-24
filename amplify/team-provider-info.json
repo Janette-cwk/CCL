@@ -1,0 +1,20 @@
+{
+    "prod": {
+        "awscloudformation": {
+            "AuthRoleName": "amplify-ccl-prod-201726-authRole",
+            "UnauthRoleArn": "arn:aws:iam::057344211178:role/amplify-ccl-prod-201726-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::057344211178:role/amplify-ccl-prod-201726-authRole",
+            "Region": "us-east-1",
+            "DeploymentBucketName": "amplify-ccl-prod-201726-deployment",
+            "UnauthRoleName": "amplify-ccl-prod-201726-unauthRole",
+            "StackName": "amplify-ccl-prod-201726",
+            "StackId": "arn:aws:cloudformation:us-east-1:057344211178:stack/amplify-ccl-prod-201726/f31e3c90-8e7e-11ea-9144-0acaf3694d17",
+            "AmplifyAppId": "d12wab27dxzyey"
+        },
+        "categories": {
+            "auth": {
+                "cclf4b7731e": {}
+            }
+        }
+    }
+}

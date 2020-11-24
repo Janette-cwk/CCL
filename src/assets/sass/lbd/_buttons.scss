@@ -1,0 +1,210 @@
+.course-display .container .next img{
+    margin-top: 0px;
+    margin-left: 0px;
+}
+.course-display .container .previous img{
+    margin-top: 0px;
+    margin-left: 0px;
+}
+.add-content input{
+    line-height: normal;
+}
+.course-display .container img{
+    width: 120%;
+    padding-left: 0;
+    margin-left: 10px;
+    margin-top: 230px;
+}
+.content .outline-content .fa-close{
+    padding-left: 90px;
+}
+.section .btn-delete{
+    margin-top: -65px;
+    margin-right: -135px;
+    float: right;
+    color: red;
+    border: none;
+    font-weight: 700;
+    text-decoration: underline;
+}
+.section .fa{
+    // padding-left: 60px;
+    cursor: pointer;
+    color: red;
+    margin-top: -160px;
+}
+.course-content .form-check-input{
+    width: 15px;
+    height: 15px;
+}
+.course-content .video-cap .img-part .uploads-btn{
+    margin-left: 45px;
+}
+.custom-file-input {
+    color:rgb(145, 144, 144); 
+    font-size: 14px; 
+    text-overflow: ellipsis;
+}
+
+.custom-file-input::-webkit-file-upload-button{
+    visibility: hidden;
+}
+.custom-file-input::before{
+    content: 'SELECT FILE';
+    display: inline-block;
+    background: linear-gradient(top, #f9f9f9, #e3e3e3);
+    border: 1px solid #1A8A9A;
+    border-radius: 3px;
+    padding: 5px 8px;
+    outline: none;
+    white-space: nowrap;
+    -webkit-user-select: none;
+    cursor: pointer;
+    text-shadow: 1px 1px #fff;
+    font-weight: 600;
+    font-size: 12px;
+    color: #1A8A9A;
+}
+.card .control-label button{
+    margin-top: 0;
+}
+.user-content button{
+    margin-top: 20px;
+}
+.user-content a{
+    margin-top: 15px;
+}
+.course-content .previous img{
+    width: 15px;
+    padding-right: 0;
+    padding-left: 0;
+    position: none;
+}
+.course-content .next img{
+    width: 15px;
+    padding-right: 0;
+    padding-left: 0;
+    position: none;
+}
+.course-popup button{
+    margin-top: 20px;
+}
+.btn{
+    border-width: $border-thick;
+    background-color: $transparent-bg;
+    font-weight: 520;
+    margin-bottom: 10px;
+    margin-right: 13px;
+    text-transform: uppercase;
+    font-size: 12px;
+    letter-spacing: 1px;;
+    
+    @include opacity(.8);
+    padding: $padding-base-vertical $padding-base-horizontal;
+    
+    @include btn-styles($default-color, $default-states-color);
+    
+    &:hover,
+    &:focus{
+        @include opacity(1);
+        outline: 0 !important;
+    }
+    &:active,
+    &.active,
+    .open > &.dropdown-toggle {
+         @include box-shadow(none);
+         outline: 0 !important;
+    }
+    
+    &.btn-icon{
+        padding: $padding-base-vertical;
+    }
+    
+}
+.btn-simple-add{
+    border: 0;
+    font-size: 16px;
+    padding: 8px 20px;
+    margin-left: 100px;
+}
+
+// Apply the mixin to the buttons
+//.btn-default { @include btn-styles($default-color, $default-states-color); }
+.btn-primary { @include btn-styles($primary-color, $primary-states-color); }
+.btn-success { @include btn-styles($success-color, $success-states-color); }
+.btn-info    { @include btn-styles($info-color, $info-states-color); }
+.btn-warning { @include btn-styles($warning-color, $warning-states-color); }
+.btn-danger  { @include btn-styles($danger-color, $danger-states-color); }
+.btn-neutral { 
+    @include btn-styles($white-color, $white-color);
+    
+    &:active,
+    &.active,
+    .open > &.dropdown-toggle{
+         background-color: $white-color;
+         color: $default-color;
+    }    
+    
+    &.btn-fill,
+    &.btn-fill:hover,
+    &.btn-fill:focus{
+        color: #1c8290;
+    }
+    
+    &.btn-simple:active,
+    &.btn-simple.active{
+        background-color: transparent;
+    }
+}
+
+.btn{
+     &:disabled,
+     &[disabled],
+     &.disabled{
+        @include opacity(.5);
+    }
+}
+.btn-round{
+    border-width: $border-thin;
+    border-radius: $btn-round-radius !important;
+    padding: $padding-round-vertical $padding-round-horizontal;
+    
+    &.btn-icon{
+        padding: $padding-round-vertical;
+    }
+}
+.btn-simple{
+    border: $none;
+    font-size: $font-size-medium;
+    padding: $padding-base-vertical $padding-base-horizontal;
+    
+    &.btn-icon{
+        padding: $padding-base-vertical;
+    }
+}
+.btn-lg{
+   @include btn-size($padding-large-vertical, $padding-large-horizontal, $font-size-large, $border-radius-large);
+   font-weight: $font-weight-normal;
+}
+.btn-sm{
+    @include btn-size($padding-small-vertical, $padding-small-horizontal, $font-size-small, $border-radius-small);    
+}
+.btn-xs {
+    @include btn-size($padding-xs-vertical, $padding-xs-horizontal, $font-size-small, $border-radius-small);
+}
+.btn-wd {
+    min-width: 140px;
+}
+
+.btn-group.select{
+    width: 100%;
+}
+.btn-group.select .btn{
+    text-align: left;
+}
+.btn-group.select .caret{
+    position: absolute;
+    top: 50%;
+    margin-top: -1px;
+    right: 8px;
+}
